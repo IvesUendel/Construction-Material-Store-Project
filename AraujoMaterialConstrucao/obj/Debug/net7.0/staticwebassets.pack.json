@@ -21,6 +21,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\Projects\\ws-DotNet\\LojaDeMateriaisDeConstrucao\\AraujoMaterialConstrucao\\AraujoMaterialConstrucao\\wwwroot\\images\\piso-1.jpg",
+      "PackagePath": "staticwebassets\\images\\piso-1.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\ws-DotNet\\LojaDeMateriaisDeConstrucao\\AraujoMaterialConstrucao\\AraujoMaterialConstrucao\\wwwroot\\images\\piso-2.jpg",
+      "PackagePath": "staticwebassets\\images\\piso-2.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\ws-DotNet\\LojaDeMateriaisDeConstrucao\\AraujoMaterialConstrucao\\AraujoMaterialConstrucao\\wwwroot\\images\\piso-3.jpg",
+      "PackagePath": "staticwebassets\\images\\piso-3.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\ws-DotNet\\LojaDeMateriaisDeConstrucao\\AraujoMaterialConstrucao\\AraujoMaterialConstrucao\\wwwroot\\images\\piso-4.jpg",
+      "PackagePath": "staticwebassets\\images\\piso-4.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\ws-DotNet\\LojaDeMateriaisDeConstrucao\\AraujoMaterialConstrucao\\AraujoMaterialConstrucao\\wwwroot\\images\\piso-5.jpg",
+      "PackagePath": "staticwebassets\\images\\piso-5.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\ws-DotNet\\LojaDeMateriaisDeConstrucao\\AraujoMaterialConstrucao\\AraujoMaterialConstrucao\\wwwroot\\images\\piso-6.jpg",
+      "PackagePath": "staticwebassets\\images\\piso-6.jpg"
+    },
+    {
       "Id": "F:\\Projects\\ws-DotNet\\LojaDeMateriaisDeConstrucao\\AraujoMaterialConstrucao\\AraujoMaterialConstrucao\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
