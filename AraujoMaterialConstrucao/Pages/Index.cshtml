@@ -15,7 +15,9 @@
                 <div class="card-body">
                     <h5 class="card-title">@item.Name</h5>
                     <p class="card-text">@item.Description</p>
-                    <a class="btn btn-primary" asp-page="/Details" asp-route-id="@item.TileId">See More</a>
+                    <a class="btn btn-primary" asp-page="/Details" 
+                                               asp-route-id="@item.TileId" 
+                                               asp-route-slug="@item.NameSlug">See More</a>
                 </div>
             </div>
         }

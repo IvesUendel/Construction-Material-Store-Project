@@ -6,6 +6,9 @@ namespace AraujoMaterialConstrucao.Models
     {  
         public int TileId { get; set; }
         public string Name { get; set; }
+
+        public string NameSlug => Name.ToLower().Replace(" ", "-");
+
         [Display(Name = "Description")]
         public string Description { get; set; }
         [Display(Name = "Image Path")]
