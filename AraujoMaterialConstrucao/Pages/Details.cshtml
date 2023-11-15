@@ -1,0 +1,20 @@
+﻿@page "/tile/{id}"
+@model AraujoMaterialConstrucao.Pages.DetailsModel
+
+<h2 class="my-3">@Model.Tile.Name</h2>
+<div class="row">
+	<div class="col-4">
+		<img class="img-fluid rounded" src="@Model.Tile.ImageUri">
+	</div>
+	<div class="col-6">
+		<h4 class="my-3">About:</h4>
+		<p>@Model.Tile.Description</p>
+		<h4 class="my-3">More Info:</h4>
+		<ul>
+			<li><label asp-for="Tile.Price"></label>: @Html.DisplayFor(model => model.Tile.Price)</li>
+			<li><label asp-for="Tile.ExpressDelivery"></label>: @Model.Tile.FormatExpressDelivery</li>
+			<li><label asp-for="Tile.RegistrationDate"></label>: @Html.DisplayFor(model => model.Tile.RegistrationDate)</li>
+		</ul>
+		<a class="btn my-3 btn-primary">Edit</a>
+	</div>
+</div>
