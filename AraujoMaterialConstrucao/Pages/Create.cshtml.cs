@@ -10,5 +10,9 @@ namespace AraujoMaterialConstrucao.Pages
         public void OnGet()
         {
         }
+
+        public void OnPost() 
+        {
+        }
     }
 }

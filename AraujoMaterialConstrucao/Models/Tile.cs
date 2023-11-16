@@ -34,6 +34,7 @@ namespace AraujoMaterialConstrucao.Models
         [Display(Name = "Available In")]
         [DisplayFormat(DataFormatString = "{0:MMMM yyyy}")]
 		[Required(AllowEmptyStrings = false, ErrorMessage = "Field 'Available In' Mandatory")]
+        [DataType("month")]
 		public DateTime RegistrationDate { get; set; }
     }
 }

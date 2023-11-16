@@ -14,10 +14,34 @@
 				<strong><span asp-validation-for="Tile.Name" class="text-danger"></span></strong>
 			</div>
 
-			@* <div class="form-group mt-3 mb-3">
-				<input class="form-check-input" asp-for="" />
-				<label asp-for=""></label>
-			</div> *@
+			<div class="form-group">
+				<strong><label asp-for="Tile.Description" class="control-label"></label></strong>
+				<input asp-for="Tile.Description" class="form-control" />
+				<strong><span asp-validation-for="Tile.Description" class="text-danger"></span></strong>
+			</div>
+
+			<div class="form-group">
+				<strong><label asp-for="Tile.ImageUri" class="control-label"></label></strong>
+				<input asp-for="Tile.ImageUri" class="form-control" />
+				<strong><span asp-validation-for="Tile.ImageUri" class="text-danger"></span></strong>
+			</div>
+
+			<div class="form-group">
+				<strong><label asp-for="Tile.Price" class="control-label"></label></strong>
+				<input asp-for="Tile.Price" class="form-control" />
+				<strong><span asp-validation-for="Tile.Price" class="text-danger"></span></strong>
+			</div>
+
+			<div class="form-group mt-3 mb-3">
+				<input class="form-check-input" asp-for="Tile.ExpressDelivery" />
+				<label asp-for="Tile.ExpressDelivery"></label>
+			</div>
+
+			<div class="form-group">
+				<strong><label asp-for="Tile.RegistrationDate" class="control-label"></label></strong>
+				<input asp-for="Tile.RegistrationDate" class="form-control" />
+				<strong><span asp-validation-for="Tile.RegistrationDate" class="text-danger"></span></strong>
+			</div>
 
 			<div class="form-group mt-4">
 				<input type="submit" value="Save" class="btn btn-primary" />
