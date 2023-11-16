@@ -6,13 +6,12 @@ namespace AraujoMaterialConstrucao.Pages
 {
     public class InsertModel : PageModel
     {
+        [BindProperty]
         public Tile Tile { get; set; }
-        public void OnGet()
-        {
-        }
 
-        public void OnPost() 
+        public IActionResult OnPost() 
         {
+            return RedirectToPage("/Index");
         }
     }
 }
