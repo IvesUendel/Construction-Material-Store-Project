@@ -8,4 +8,5 @@ public interface ITileService
 	Tile GetItem(int id);
 	void Include(Tile tile);
 	void Edit(Tile tile);
+	void Delete(int id);
 }

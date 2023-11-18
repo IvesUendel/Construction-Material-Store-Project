@@ -29,5 +29,13 @@ namespace AraujoMaterialConstrucao.Pages
 
 			return RedirectToPage("/Index");
 		}
+
+		public IActionResult OnPostDelete()
+		{
+
+			_tileService.Delete(Tile.TileId);
+
+			return RedirectToPage("/Index");
+		}
 	}
 }

@@ -78,4 +78,10 @@ public class TileService : ITileService
 		tileFound.ExpressDelivery = tile.ExpressDelivery;
 		tileFound.RegistrationDate = tile.RegistrationDate;
 	}
+
+	public void Delete(int id)
+	{
+		var tileFound = GetItem(id);
+		_tiles.Remove(tileFound);
+	}
 }
