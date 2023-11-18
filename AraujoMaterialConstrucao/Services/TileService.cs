@@ -2,11 +2,15 @@
 
 namespace AraujoMaterialConstrucao.Services;
 
-public class TileService
+public class TileService : ITileService
 {
-	public IList<Tile> GetAll()
+	private IList<Tile> _tiles;
+
+	public TileService() => LoadInitialList();
+
+	private void LoadInitialList()
 	{
-		return new List<Tile>()
+		_tiles = new List<Tile>()
 		{
 			new Tile
 			{
@@ -51,9 +55,17 @@ public class TileService
 		};
 	}
 
+	public IList<Tile> GetAll() => _tiles;
+
 	public Tile GetItem(int id)
 	{
-		return GetAll().SingleOrDefault(item => item.TileId == id);
-		
+		return _tiles.SingleOrDefault(item => item.TileId == id);	
+	}
+
+	public void Include(Tile tile) 
+	{ 
+		var nextNumber = _tiles.Max(item => item.TileId) +1;
+		tile.TileId = nextNumber;
+		_tiles.Add(tile);
 	}
 }
