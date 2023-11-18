@@ -1,12 +1,14 @@
 ﻿@page
-@model AraujoMaterialConstrucao.Pages.CreateModel
+@model AraujoMaterialConstrucao.Pages.EditModel
 
 <div class="row pt-5">
 	<div class="col-md-4">
 		<form method="post">
-			<h4>Tile Inclusion</h4>
+			<h4>Tile Edit</h4>
 			<hr />
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+			<input type="hidden" asp-for="Tile.TileId"/>
 
 			<div class="form-group">
 				<strong><label asp-for="Tile.Name" class="control-label"></label></strong>

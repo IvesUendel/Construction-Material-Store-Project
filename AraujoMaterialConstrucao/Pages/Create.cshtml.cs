@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AraujoMaterialConstrucao.Pages
 {
-    public class InsertModel : PageModel
+    public class CreateModel : PageModel
     {
         private ITileService _tileService;
-        public InsertModel(ITileService tileService)
+        public CreateModel(ITileService tileService)
         {
             _tileService = tileService;
         }

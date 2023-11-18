@@ -68,4 +68,14 @@ public class TileService : ITileService
 		tile.TileId = nextNumber;
 		_tiles.Add(tile);
 	}
+
+	public void Edit(Tile tile)
+	{
+		var tileFound = GetItem(tile.TileId);
+		tileFound.Name = tile.Name;
+		tileFound.Description = tile.Description;
+		tileFound.Price = tile.Price;
+		tileFound.ExpressDelivery = tile.ExpressDelivery;
+		tileFound.RegistrationDate = tile.RegistrationDate;
+	}
 }
