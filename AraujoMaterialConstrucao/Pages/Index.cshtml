@@ -7,6 +7,16 @@
 <div class="text-center">
     <h1 class="display-4">The Biggest and Best Building Materials Store!</h1>
     <div class="row justify-content-md-center">
+
+        @if (TempData["TempMenssageSuccess"] != null)
+        {
+            <div class="alert alert-success mt-5"
+                 role="alert" style="width: 80%">
+                <h4 class="alert-heading">Success!</h4>
+                Operation carried out successfully
+            </div>
+        }
+
         @foreach (var item in Model.TilesList)
         {
         

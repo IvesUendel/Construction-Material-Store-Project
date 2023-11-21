@@ -35,7 +35,9 @@ namespace AraujoMaterialConstrucao.Pages
 
 			_tileService.Delete(Tile.TileId);
 
-			return RedirectToPage("/Index");
+            TempData["TempMenssageSuccess"] = true;
+
+            return RedirectToPage("/Index");
 		}
 	}
 }
