@@ -9,4 +9,5 @@ public interface ITileService
 	void Include(Tile tile);
 	void Edit(Tile tile);
 	void Delete(int id);
+	IList<Brand> GetAllBrands();
 }

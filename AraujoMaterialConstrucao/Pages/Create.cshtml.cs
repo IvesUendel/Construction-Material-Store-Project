@@ -2,13 +2,22 @@ using AraujoMaterialConstrucao.Models;
 using AraujoMaterialConstrucao.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Text.RegularExpressions;
 
 namespace AraujoMaterialConstrucao.Pages
 {
     public class CreateModel : PageModel
     {
         private ITileService _tileService;
-        public CreateModel(ITileService tileService)
+		public SelectList BrandOptionItems { get; set; }
+		public void OnGet()
+		{
+			BrandOptionItems = new SelectList(_tileService.GetAllBrands(),
+			nameof(Brand.BrandId),
+			nameof(Brand.Description));
+		}
+		public CreateModel(ITileService tileService)
         {
             _tileService = tileService;
         }

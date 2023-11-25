@@ -85,4 +85,17 @@ public class TileService : ITileService
         var tileFound = GetItem(id);
         _tiles.Remove(tileFound);
     }
+
+	public IList<Brand> GetAllBrands()
+	{
+		return new List<Brand>()
+		{
+			new Brand() { Description = "Porcelanosa"},
+			new Brand() { Description = "Johnson Tiles"},
+			new Brand() { Description = "Daltile"},
+			new Brand() { Description = "Ceramiche Piemme"},
+			new Brand() { Description = "Crossville Tile"},
+			new Brand() { Description = "Roca Tile"}
+		};
+	}
 }

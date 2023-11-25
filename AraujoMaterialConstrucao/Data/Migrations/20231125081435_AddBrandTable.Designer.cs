@@ -4,6 +4,7 @@ using AraujoMaterialConstrucao.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AraujoMaterialConstrucao.Data.Migrations
 {
     [DbContext(typeof(MaterialConstructionDbContext))]
-    partial class MaterialConstructionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231125081435_AddBrandTable")]
+    partial class AddBrandTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,9 +50,6 @@ namespace AraujoMaterialConstrucao.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TileId"));
 
-                    b.Property<int?>("BrandId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(175)
@@ -75,21 +75,7 @@ namespace AraujoMaterialConstrucao.Data.Migrations
 
                     b.HasKey("TileId");
 
-                    b.HasIndex("BrandId");
-
                     b.ToTable("Tile");
-                });
-
-            modelBuilder.Entity("AraujoMaterialConstrucao.Models.Tile", b =>
-                {
-                    b.HasOne("AraujoMaterialConstrucao.Models.Brand", null)
-                        .WithMany("Tiles")
-                        .HasForeignKey("BrandId");
-                });
-
-            modelBuilder.Entity("AraujoMaterialConstrucao.Models.Brand", b =>
-                {
-                    b.Navigation("Tiles");
                 });
 #pragma warning restore 612, 618
         }

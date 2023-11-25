@@ -37,7 +37,12 @@ public class TileService : ITileService
         return _context.Tile.ToList();
     }
 
-    public Tile GetItem(int id)
+	public IList<Brand> GetAllBrands()
+	{
+		return _context.Brand.ToList();
+	}
+
+	public Tile GetItem(int id)
     {
         return _context.Tile.SingleOrDefault(item => item.TileId == id);
     }
