@@ -1,9 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AraujoMaterialConstrucao.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AraujoMaterialConstrucao.Data;
 
 public class MaterialConstructionDbContext : DbContext
 {
+    public DbSet<Tile> Tile { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
