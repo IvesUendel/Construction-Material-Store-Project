@@ -1,11 +1,12 @@
 using AraujoMaterialConstrucao.Data;
 using AraujoMaterialConstrucao.Services;
+using AraujoMaterialConstrucao.Services.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<ITileService, TileService>();
+builder.Services.AddTransient<ITileService, TileService>();
 
 builder.Services.AddDbContext<MaterialConstructionDbContext>();
 

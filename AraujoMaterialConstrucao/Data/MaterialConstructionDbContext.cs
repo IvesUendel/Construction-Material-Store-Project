@@ -6,6 +6,7 @@ namespace AraujoMaterialConstrucao.Data;
 public class MaterialConstructionDbContext : DbContext
 {
     public DbSet<Tile> Tile { get; set; }
+    public DbSet<Brand> Brand { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
