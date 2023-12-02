@@ -13,9 +13,11 @@ namespace AraujoMaterialConstrucao.Pages;
         _tileService = tileService;
     }
 	public Tile Tile { get; private set; }
-	public IActionResult OnGet(int id)
+    public Brand Brand { get; set; }
+    public IActionResult OnGet(int id)
     {
         Tile = _tileService.GetItem(id);
+        Brand = _tileService.GetAllBrands().SingleOrDefault(item => item.BrandId == Tile.BrandId);
 
         if(Tile == null)
         {

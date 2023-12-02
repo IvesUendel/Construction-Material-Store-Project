@@ -14,6 +14,10 @@
 			<li><label asp-for="Tile.Price"></label>: @Html.DisplayFor(model => model.Tile.Price)</li>
 			<li><label asp-for="Tile.ExpressDelivery"></label>: @Model.Tile.FormatExpressDelivery</li>
 			<li><label asp-for="Tile.RegistrationDate"></label>: @Html.DisplayFor(model => model.Tile.RegistrationDate)</li>
+			@if(Model.Brand is not null)
+			{
+				<li><label asp-for="Tile.BrandId"></label>: @Html.DisplayFor(model => model.Brand.Description)</li>
+			}
 		</ul>
 		<a class="btn my-3 btn-primary" asp-page="Edit" asp-route-id="@Model.Tile.TileId">Edit</a>
 	</div>

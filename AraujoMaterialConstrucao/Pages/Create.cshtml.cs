@@ -14,8 +14,8 @@ namespace AraujoMaterialConstrucao.Pages
 		public void OnGet()
 		{
 			BrandOptionItems = new SelectList(_tileService.GetAllBrands(),
-			nameof(Brand.BrandId),
-			nameof(Brand.Description));
+			                                        nameof(Brand.BrandId),
+			                                    nameof(Brand.Description));
 		}
 		public CreateModel(ITileService tileService)
         {

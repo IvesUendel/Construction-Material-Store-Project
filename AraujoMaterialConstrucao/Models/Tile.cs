@@ -39,5 +39,6 @@ public class Tile
     [DataType("month")]
 	public DateTime RegistrationDate { get; set; }
 
+    [Display(Name = "Brand")]
     public int? BrandId { get; set; }
 }

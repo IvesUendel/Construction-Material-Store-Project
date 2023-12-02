@@ -28,6 +28,7 @@ public class TileService : ITileService
         tileFound.ExpressDelivery = tile.ExpressDelivery;
         tileFound.RegistrationDate = tile.RegistrationDate;
         tileFound.ImageUri = tile.ImageUri;
+        tileFound.BrandId = tile.BrandId;
 
         _context.SaveChanges();
     }
