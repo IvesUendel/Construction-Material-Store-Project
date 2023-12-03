@@ -15,8 +15,6 @@ public class IndexModel : PageModel
     public IList<Tile> TilesList { get; private set; }
     public void OnGet()
     {
-        //var service = new TileService();
-
         TilesList = _tileService.GetAll();
     }
 
