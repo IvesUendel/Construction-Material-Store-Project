@@ -1,11 +1,13 @@
 using AraujoMaterialConstrucao.Models;
 using AraujoMaterialConstrucao.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AraujoMaterialConstrucao.Pages
 {
+    [Authorize]
     public class EditModel : PageModel
     {
 		private ITileService _tileService;

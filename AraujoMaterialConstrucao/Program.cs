@@ -2,14 +2,32 @@ using AraujoMaterialConstrucao.Data;
 using AraujoMaterialConstrucao.Services;
 using AraujoMaterialConstrucao.Services.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages(options => {
+    options.Conventions.AuthorizeFolder("/Brands");
+});
 builder.Services.AddTransient<ITileService, TileService>();
 
 builder.Services.AddDbContext<MaterialConstructionDbContext>();
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<MaterialConstructionDbContext>();
+
+builder.Services.Configure<IdentityOptions>(options => {
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 3;
+    // Lockout settings
+    options.Lockout.MaxFailedAccessAttempts = 30;
+    options.Lockout.AllowedForNewUsers = true;
+    // User settings
+    options.User.RequireUniqueEmail = true;
+});
 
 var app = builder.Build();
 
@@ -22,12 +40,16 @@ if (!app.Environment.IsDevelopment())
 }
 
 var context = new MaterialConstructionDbContext();
+
 context.Database.Migrate();
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

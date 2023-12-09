@@ -19,6 +19,9 @@
 				<li><label asp-for="Tile.BrandId"></label>: @Html.DisplayFor(model => model.Brand.Description)</li>
 			}
 		</ul>
-		<a class="btn my-3 btn-primary" asp-page="Edit" asp-route-id="@Model.Tile.TileId">Edit</a>
+		@if (User.Identity.IsAuthenticated)
+		{
+			<a class="btn my-3 btn-primary" asp-page="Edit" asp-route-id="@Model.Tile.TileId">Edit</a>
+		}
 	</div>
 </div>

@@ -1,9 +1,10 @@
 ﻿using AraujoMaterialConstrucao.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AraujoMaterialConstrucao.Data;
 
-public class MaterialConstructionDbContext : DbContext
+public class MaterialConstructionDbContext : IdentityDbContext
 {
     public DbSet<Tile> Tile { get; set; }
     public DbSet<Brand> Brand { get; set; }
